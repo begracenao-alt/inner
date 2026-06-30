@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Be Grace｜整体 × 潜在意識で、本来のあなたへ</title>
+<meta name="description" content="潜在意識を変えたいなら、まず“受け取れるカラダ”へ。整体×潜在意識で、本来のあなたに還る。" />
+<meta name="theme-color" content="#6f74b8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{ --accent:#6f74b8; --accent2:#9aa0d8; --ink:#3a394e; --ink-soft:#76758e; --line:#e4e2f1; --card:#fff; }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{ font-family:"Shippori Mincho","Hiragino Mincho ProN",serif; color:var(--ink); line-height:2; -webkit-font-smoothing:antialiased;
+    background:
+      radial-gradient(120% 70% at 50% -6%, #f8f7fd 0%, rgba(255,255,255,0) 45%),
+      linear-gradient(165deg, #eeedf9 0%, #e4e3f5 45%, #d8d8f0 100%);
+    background-attachment:fixed; }
+  .wrap{ max-width:540px; margin:0 auto; padding:0 0 56px; }
+  .sec{ background:var(--card); margin:0 14px 16px; border:1px solid rgba(255,255,255,.7); border-radius:22px;
+    box-shadow:0 18px 45px -28px rgba(60,90,110,.45); padding:30px 24px; }
+
+  /* hero */
+  .hero{ text-align:center; padding:56px 24px 26px; }
+  .hero .brand{ font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:500; font-size:32px; letter-spacing:.05em;
+    background:linear-gradient(120deg,#e3d3a3 0%,#c4a86d 45%,#e8dab0 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero h1{ font-size:clamp(22px,5.6vw,28px); font-weight:600; letter-spacing:.03em; line-height:1.75; margin:18px 0 0; }
+  .hero h1 .em{ color:var(--accent); }
+  .hero .lead{ margin-top:18px; font-size:14.5px; color:var(--ink-soft); line-height:2.1; }
+  .hero .ph{ width:112px; height:112px; border-radius:50%; margin:18px auto 4px; position:relative; overflow:hidden;
+    background:linear-gradient(160deg,var(--accent2),var(--accent)); box-shadow:0 12px 28px -10px var(--accent); }
+  .hero .ph .em{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:38px; color:#fff; }
+  .hero .ph img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 5%; }
+
+  .eyebrow{ text-align:center; font-family:"Cormorant Garamond",serif; font-style:italic; font-size:14px; letter-spacing:.22em; color:var(--accent); text-transform:uppercase; }
+  .htitle{ text-align:center; font-size:20px; font-weight:600; letter-spacing:.03em; line-height:1.7; margin:6px 0 16px; }
+  .sec p{ font-size:14.5px; line-height:2.15; }
+  .sec p + p{ margin-top:14px; }
+  .em{ color:var(--accent); font-weight:600; }
+  .center{ text-align:center; }
+  .bal{ text-align:center; }
+
+  .check{ list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .check li{ position:relative; padding-left:30px; font-size:15px; }
+  .check li::before{ content:"☑"; position:absolute; left:0; color:var(--accent); }
+
+  .promise{ text-align:center; font-size:16px; line-height:2.1; }
+  .promise .big{ font-size:19px; color:var(--accent); font-weight:600; }
+
+  .sci{ display:flex; flex-direction:column; gap:12px; }
+  .sci .item{ background:#f5f4fb; border:1px solid #e6e4f2; border-radius:14px; padding:13px 15px; font-size:13.5px; line-height:1.9; }
+  .sci .item b{ color:var(--accent); }
+  .sci-note{ font-size:11.5px; color:var(--ink-soft); margin-top:6px; text-align:center; }
+
+  /* プライベートセッション */
+  .sub-name{ text-align:center; font-size:13px; letter-spacing:.12em; color:var(--ink-soft); margin-bottom:2px; }
+  .free-lead{ font-size:12px; letter-spacing:.08em; color:var(--ink-soft); }
+  .free{ display:inline-block; font-size:12.5px; font-weight:600; letter-spacing:.12em; color:#fff; background:linear-gradient(100deg,var(--accent2),var(--accent)); border-radius:999px; padding:5px 18px; margin-top:7px; box-shadow:0 8px 18px -10px rgba(70,140,170,.55); }
+  .wish{ list-style:none; text-align:center; margin:18px 0 6px; }
+  .wish li{ font-size:15px; line-height:2.25; color:var(--accent); letter-spacing:.02em; font-weight:600; }
+
+  /* お声（文章のみ） */
+  .voice{ font-size:13.5px; background:#fbfdfe; border-left:3px solid var(--accent2); border-radius:8px; padding:13px 15px; margin-bottom:10px; color:#4a565e; line-height:2; }
+  .voice .who{ display:block; margin-top:8px; font-size:12px; color:var(--ink-soft); text-align:right; }
+
+  /* 申し込みフォーム */
+  .cta-lead{ text-align:center; font-size:15.5px; line-height:2.15; margin-bottom:6px; }
+  .field{ margin-bottom:14px; }
+  .field > label{ display:block; font-size:13px; font-weight:600; margin-bottom:6px; }
+  .field > label .opt{ font-weight:400; font-size:11px; color:var(--ink-soft); margin-left:5px; }
+  .field .hint{ font-size:11px; color:var(--ink-soft); margin-top:5px; line-height:1.8; }
+  .kibou{ display:flex; align-items:center; gap:9px; margin-bottom:8px; }
+  .kibou .kl{ flex:none; width:58px; font-size:12px; color:var(--ink-soft); }
+  input[type=text], input[type=email], textarea{ width:100%; font-family:"Shippori Mincho",serif; font-size:15px; color:var(--ink);
+    border:1px solid var(--line); border-radius:12px; background:#fbfdfe; padding:11px 13px; }
+  textarea{ min-height:74px; resize:vertical; line-height:1.8; }
+  input:focus, textarea:focus{ outline:none; border-color:var(--accent); background:#fff; }
+  .submit{ display:block; width:100%; font-family:"Shippori Mincho",serif; font-size:15.5px; font-weight:600; color:#46497e; letter-spacing:.04em;
+    border:none; border-radius:14px; padding:16px; cursor:pointer; margin-top:6px;
+    background:linear-gradient(100deg,#b0b4dd 16%,#e1e2f2 43%,#fbfbff 50%,#e1e2f2 57%,#b0b4dd 84%); background-size:220% auto;
+    animation:shimmer 6.5s linear infinite; box-shadow:0 14px 28px -14px rgba(110,116,184,.55); }
+  @keyframes shimmer{ to{ background-position:-220% center; } }
+  @media (prefers-reduced-motion:reduce){ .submit{ animation:none; } }
+  .submit:active{ transform:translateY(1px); } .submit:disabled{ opacity:.6; }
+  .form-note{ font-size:11px; color:var(--ink-soft); margin-top:11px; line-height:1.8; text-align:center; }
+  .thanks{ display:none; text-align:center; padding:8px 4px; }
+  .thanks .big{ font-size:17px; font-weight:600; color:var(--accent); margin-bottom:10px; }
+  .thanks p{ font-size:13.5px; line-height:2; }
+
+  .foot{ text-align:center; margin-top:30px; font-size:12px; color:var(--ink-soft); }
+  .foot .fmark{ font-family:"Cormorant Garamond",serif; font-style:italic; font-size:16px; color:var(--accent); }
+  .draftnote{ text-align:center; font-size:11px; color:#9bb9c7; margin:14px 16px 0; line-height:1.85; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brand">Be Grace</div>
+    <div class="ph"><span class="em">🤍</span><img src="profile.jpg" alt="なお" onerror="this.remove()"></div>
+    <h1>潜在意識を変えたいなら、<br>まず<span class="em">“受け取れるカラダ”</span>へ。</h1>
+    <div class="lead">姿勢・呼吸・表情が整うと、<br>恋愛も、仕事も、選ぶ未来も、変わりはじめます。</div>
+  </header>
+
+  <!-- 共感 -->
+  <section class="sec">
+    <div class="eyebrow">Are you…</div>
+    <div class="htitle">こんな想い、ありませんか？</div>
+    <ul class="check">
+      <li>私は、まだまだ「もっといける」</li>
+      <li>なりたい自分に、自然と近づきたい</li>
+      <li>いくつになっても、可能性を広げていたい</li>
+      <li>本来の力を、もっと発揮したい</li>
+      <li>毎日を、もっと心地よく過ごしたい</li>
+    </ul>
+  </section>
+
+  <!-- BE GRACE 哲学（なお様の言葉） -->
+  <section class="sec">
+    <div class="eyebrow">Be Grace</div>
+    <div class="htitle">カラダが整うと、<br>未来の選び方が変わります。</div>
+    <p class="promise">カラダがゆるむと、呼吸が深くなる。<br><br>
+      呼吸が深くなると、<br>心にも頭にも、余白が生まれる。<br><br>
+      その余白が、<br>新しいひらめきを生み、<br>軽やかな一歩につながっていく。<br><br>
+      <span class="big">なりたい自分へ、まっすぐ進める。</span><br><br>
+      恋愛も、仕事も、日々の選択も。<br><br>
+      整った瞬間から、<br>未来は変わりはじめます。</p>
+  </section>
+
+  <!-- なぜカラダから（科学） -->
+  <section class="sec">
+    <div class="eyebrow">Science</div>
+    <div class="htitle">なぜ、“カラダから”なのか</div>
+    <div class="sci">
+      <div class="item"><b>姿勢</b>が、感情と思考を変える。猫背はネガティブ思考を増やし、整えると気分も思考も上向く（身体心理学）。</div>
+      <div class="item"><b>ゆっくりの呼吸</b>が、自律神経（迷走神経）を整える。1回でも不安が下がると報告されています。</div>
+      <div class="item"><b>首・肩の緊張</b>は、ストレス・考えすぎと深く関わる。ゆるめると、頭の中まで静かになる。</div>
+    </div>
+    <div class="sci-note">※自己理解・健康増進のための情報で、医療的な診断・治療ではありません。</div>
+  </section>
+
+  <!-- ② 診断でわかるのは傾向まで -->
+  <section class="sec">
+    <div class="eyebrow">Here…</div>
+    <div class="htitle">でも、診断でわかるのは、<br>今のあなたの“傾向”まで。</div>
+    <p class="center">同じタイプでも、<br>心のクセも、毎日の過ごし方も、<br>整え方は人それぞれです。</p>
+    <p class="center">ここから先は、<br><span class="em">あなたに合う整え方</span>へ進んでいきましょう。</p>
+  </section>
+
+  <!-- ③ プライベートセッション -->
+  <section class="sec">
+    <div class="eyebrow">Private Session</div>
+    <div class="sub-name">未来のカラダを整える</div>
+    <div class="htitle">プライベートセッション</div>
+    <div class="center" style="margin-bottom:18px"><div class="free-lead">診断を受けた方への</div><span class="free">無料ご招待</span></div>
+    <p class="bal">診断結果をもとに、<br>今のあなたに合った整え方や、<br>これからどんなふうにカラダを<br>育てていくといいのかを、お伝えします。</p>
+    <p class="bal">今のあなたに合う整え方を<br>知ることで、これからの自分が、<br><span class="em">楽しみになる時間</span>です。</p>
+    <ul class="wish">
+      <li>なりたい自分に、近づいていきたい。</li>
+      <li>本来の力を、もっと発揮したい。</li>
+      <li>毎日を、もっと心地よく過ごしたい。</li>
+      <li>心も軽やかに、自分らしく生きたい。</li>
+    </ul>
+    <p class="center">そんな未来に向けて、<br>今のあなたに必要な一歩を、いっしょに見つけていきます。</p>
+  </section>
+
+  <!-- 受講生のお声（潜在意識・心の変化のみ） -->
+  <section class="sec">
+    <div class="eyebrow">Voice</div>
+    <div class="htitle">受けた方の変化</div>
+    <div class="voice">切り替え上手になってきたり、明るいパワーを持てるのも、be graceメソッドと、毎週なおさんとお話させていただく機会があるからこそです。素敵な環境に感謝いっぱいです。<span class="who">— 30代・S.O様</span></div>
+    <div class="voice">嬉しさとともに湧き上がる前向きな気持ち。私は次の夢に向けてのステップを確実に進んでいます♪　この絵本のような奇跡を与えてくださったなおさん。こぼれていく夢を一緒に支えてくれた彼女には感謝の気持ちでいっぱいです♥ ありがとうございます。<span class="who">— 30代・O.S様</span></div>
+    <div class="voice">今日受講して、身体の仕組みや、感情が身体に影響を及ぼすことを知り、直接聞いてみたことで、より気づくことができました。<span class="who">— 30代・N.N様</span></div>
+    <div class="voice">私はなおさんとの出会いで、人生が楽しい〜　未来が楽しみ〜と思えるようになりました‼️<span class="who">— 40代・M.F様</span></div>
+  </section>
+
+  <!-- ④ CTA＋申し込みフォーム -->
+  <section class="sec">
+    <div class="eyebrow">For you</div>
+    <div class="cta-lead">あなたの未来は今、何を求めていますか。<br><span class="em">あなただけの読み解き</span>を、<br>受け取りに来てください🤍</div>
+    <div id="formArea">
+      <div class="field"><label for="f_name">お名前</label><input type="text" id="f_name" placeholder="例：なお" /></div>
+      <div class="field">
+        <label>ご希望日時</label>
+        <div class="kibou"><span class="kl">第1希望</span><input type="text" id="f_k1" placeholder="例：7月8日（火）10:00〜12:00" /></div>
+        <div class="kibou"><span class="kl">第2希望</span><input type="text" id="f_k2" placeholder="例：7月10日（木）20:00以降" /></div>
+        <div class="kibou"><span class="kl">第3希望</span><input type="text" id="f_k3" placeholder="例：土日の午前中　など" /></div>
+        <div class="hint">※だいたいのご希望で大丈夫です🤍</div>
+      </div>
+      <div class="field"><label for="f_mail">メール <span class="opt">（任意）</span></label><input type="email" id="f_mail" placeholder="例：you@example.com" /></div>
+      <div class="field"><label for="f_tel">電話 <span class="opt">（任意）</span></label><input type="text" id="f_tel" inputmode="tel" placeholder="例：090-1234-5678" /></div>
+      <div class="field"><label for="f_msg">ひとこと・ご質問 <span class="opt">（任意）</span></label>
+        <textarea id="f_msg" placeholder="今いちばん気になっていること、聞いてみたいことなど、自由にどうぞ。"></textarea></div>
+      <button class="submit" id="submitBtn">🤍 プライベートセッションを申し込む</button>
+      <div class="form-note">※送信後、なおから日程調整のご連絡をさせていただきます。</div>
+    </div>
+    <div class="thanks" id="thanks">
+      <div class="big">お申し込み、ありがとうございます🤍</div>
+      <p>たしかに受け取りました。<br>このあと、なおから日程調整のご連絡をさせていただきます。</p>
+    </div>
+  </section>
+
+  <div class="foot"><span class="fmark">Be Grace</span><br>本来のあなたに、還る時間を。</div>
+
+</div>
+
+<script>
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbwgcIrNCpjRZMeB069gP9xD5MM0pzHrhCMXfYXR6Q_Mcs1AtCrlZZ8bUJnj1ez2MdrFoA/exec";
+  var btn = document.getElementById("submitBtn");
+  function done(){
+    document.getElementById("formArea").style.display = "none";
+    document.getElementById("thanks").style.display = "block";
+  }
+  btn.addEventListener("click", function(){
+    var name = document.getElementById("f_name").value.trim();
+    var k1 = document.getElementById("f_k1").value.trim();
+    var k2 = document.getElementById("f_k2").value.trim();
+    var k3 = document.getElementById("f_k3").value.trim();
+    var mail = document.getElementById("f_mail").value.trim();
+    var tel = document.getElementById("f_tel").value.trim();
+    var msg = document.getElementById("f_msg").value.trim();
+    if(!name){ alert("お名前を入れてくださいね🤍"); return; }
+    if(!k1){ alert("第1希望の日時を入れてくださいね🤍"); return; }
+    btn.disabled = true; btn.textContent = "送信中…";
+    var data = {
+      "種類": "プライベートセッション（潜在意識・inner）",
+      "お名前": name,
+      "第1希望": k1, "第2希望": (k2||"なし"), "第3希望": (k3||"なし"),
+      "メール": (mail||"なし"),
+      "電話": (tel||"なし"),
+      "ひとこと": (msg||"なし")
+    };
+    fetch(ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)}).then(done).catch(done);
+  });
+</script>
+</body>
+</html>
