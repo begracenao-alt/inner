@@ -182,23 +182,25 @@
     <div class="cta-lead">あなたの未来は今、何を求めていますか。<br><span class="em">あなただけの読み解き</span>を、<br>受け取りに来てください🤍</div>
     <div id="formArea">
       <div class="field"><label for="f_name">お名前</label><input type="text" id="f_name" placeholder="例：なお" /></div>
+      <div class="field"><label for="f_line">公式LINEのお名前</label><input type="text" id="f_line" placeholder="LINEに表示されているお名前" />
+        <div class="hint">※LINEでお返事します🤍</div></div>
+      <div class="field"><label for="f_mail">メール</label><input type="email" id="f_mail" placeholder="例：you@example.com" />
+        <div class="hint">※LINEで届かない時の、ご連絡用📩</div></div>
       <div class="field">
-        <label>ご希望日時</label>
+        <label>ご希望日時 <span class="opt">（任意）</span></label>
         <div class="kibou"><span class="kl">第1希望</span><input type="text" id="f_k1" placeholder="例：7月8日（火）10:00〜12:00" /></div>
         <div class="kibou"><span class="kl">第2希望</span><input type="text" id="f_k2" placeholder="例：7月10日（木）20:00以降" /></div>
         <div class="kibou"><span class="kl">第3希望</span><input type="text" id="f_k3" placeholder="例：土日の午前中　など" /></div>
         <div class="hint">※だいたいのご希望で大丈夫です🤍</div>
       </div>
-      <div class="field"><label for="f_mail">メール <span class="opt">（任意）</span></label><input type="email" id="f_mail" placeholder="例：you@example.com" /></div>
-      <div class="field"><label for="f_tel">電話 <span class="opt">（任意）</span></label><input type="text" id="f_tel" inputmode="tel" placeholder="例：090-1234-5678" /></div>
       <div class="field"><label for="f_msg">ひとこと・ご質問 <span class="opt">（任意）</span></label>
         <textarea id="f_msg" placeholder="今いちばん気になっていること、聞いてみたいことなど、自由にどうぞ。"></textarea></div>
       <button class="submit" id="submitBtn">🤍 プライベートセッションを申し込む</button>
-      <div class="form-note">※送信後、なおから日程調整のご連絡をさせていただきます。</div>
+      <div class="form-note">※数日内に、LINE（またはメール）でお返事します🤍</div>
     </div>
     <div class="thanks" id="thanks">
       <div class="big">お申し込み、ありがとうございます🤍</div>
-      <p>たしかに受け取りました。<br>このあと、なおから日程調整のご連絡をさせていただきます。</p>
+      <p>数日以内に、なおから<b>LINE（またはメール）</b>でお返事します😊<br>もし届かない場合は、お手数ですが<b>公式LINE</b>にメッセージをくださいね🌷</p>
     </div>
   </section>
 
@@ -215,21 +217,22 @@
   }
   btn.addEventListener("click", function(){
     var name = document.getElementById("f_name").value.trim();
+    var line = document.getElementById("f_line").value.trim();
+    var mail = document.getElementById("f_mail").value.trim();
     var k1 = document.getElementById("f_k1").value.trim();
     var k2 = document.getElementById("f_k2").value.trim();
     var k3 = document.getElementById("f_k3").value.trim();
-    var mail = document.getElementById("f_mail").value.trim();
-    var tel = document.getElementById("f_tel").value.trim();
     var msg = document.getElementById("f_msg").value.trim();
     if(!name){ alert("お名前を入れてくださいね🤍"); return; }
-    if(!k1){ alert("第1希望の日時を入れてくださいね🤍"); return; }
+    if(!line){ alert("公式LINEのお名前を入れてくださいね🤍"); return; }
+    if(!mail){ alert("メールを入れてくださいね🤍"); return; }
     btn.disabled = true; btn.textContent = "送信中…";
     var data = {
       "種類": "プライベートセッション（潜在意識・inner）",
       "お名前": name,
-      "第1希望": k1, "第2希望": (k2||"なし"), "第3希望": (k3||"なし"),
-      "メール": (mail||"なし"),
-      "電話": (tel||"なし"),
+      "公式LINEのお名前": line,
+      "メール": mail,
+      "第1希望": (k1||"なし"), "第2希望": (k2||"なし"), "第3希望": (k3||"なし"),
       "ひとこと": (msg||"なし")
     };
     fetch(ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)}).then(done).catch(done);
